@@ -32,12 +32,12 @@ def get_status(url = os.environ['STATUS_URL']):
             'id': el.findtext('id'),
             'admin_id': el.findtext('admin-id'),
             'received': {
-                'sms': int(el.findtext('received/sms')),
-                'dlr': int(el.findtext('received/dlr'))
+                'sms': int(el.findtext('sms/received')),
+                'dlr': int(el.findtext('dlr/received'))
             },
             'sent': {
-                'sms': int(el.findtext('sent/sms')),
-                'dlr': int(el.findtext('sent/dlr'))
+                'sms': int(el.findtext('sms/sent')),
+                'dlr': int(el.findtext('dlr/sent'))
             },
             'failed' : int(el.findtext('failed')),
             'queued' : int(el.findtext('failed')),
